@@ -29,8 +29,7 @@ void graph::create()
 {
 	for(int i=1;i<=n;i++)
 	{
-		cout<<"Enter the "<<i<<"th row of matrix a:
-";
+		cout<<"Enter the "<<i<<"th row of matrix a:";
 		for(int j=1;j<=n;j++)
 			cin>>a[i][j];
 	}
@@ -50,11 +49,11 @@ void graph::dfs()
 The contents of the reach array is:
 ;
 	for(int j=1;j<=n;j++)
-		cout<<reach[j]<<"	";
+		cout<<reach[j]<<" ";
 }
 void graph::dfs(int v,int label)
 {
-	cout<<v<<"	";
+	cout<<v<<" ";
 	reach[v]=label;
 	int u=begin(v);
 	while(u)
@@ -67,8 +66,7 @@ void graph::dfs(int v,int label)
 int graph::begin(int v)
 {
 	if((v<1)&&(v>n))
-		cout<<"Bad input
-";
+		cout<<"Bad input";
 	else
 		for(int i=1;i<=n;i++)
 			if(a[v][i]==1)
@@ -81,8 +79,7 @@ int graph::begin(int v)
 int graph::nextvert(int v)
 {
 	if((v<1)&&(v>n))
-		cout<<"Bad input
-";
+		cout<<"Bad input ";
 	else
 		for(int i=pos[v]+1;i<=n;i++)
 			if(a[v][i]==1)
@@ -96,8 +93,7 @@ void main()
 {
 	clrscr();
 	int x;
-	cout<<"Enter the no of vertices:
-";
+	cout<<"Enter the no of vertices:";
 	cin>>x;
 	graph g(x);
 	g.create();
